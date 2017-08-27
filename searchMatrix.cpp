@@ -15,10 +15,7 @@ bool binarySearch(vector<int> array, int target)
     int size = array.size();
     while(startRow<endRow)
     {
-        cout<<"BINStart:"<<startRow<<" BINEnd:"<<endRow<<endl;
         int middleIndex = (endRow+startRow+1)/2;
-        cout<<"BINMiddle:"<<middleIndex<<endl;
-        cout<<"Target:"<<target<<" middleelem:"<<array[middleIndex]<<endl;
         if(target == array[middleIndex])
             return true;
         if(target > array[middleIndex])
@@ -48,11 +45,8 @@ public:
         int middleIndex;
         while(startRow<endRow)
         {
-            cout<<"Start:"<<startRow<<" End:"<<endRow<<endl;
             middleIndex = (endRow+startRow+1)/ 2;
-            cout<<"Middle:"<<middleIndex<<endl;
             int middleElement = matrix[middleIndex][0];
-            cout<<"Target:"<<target<<" middleelem:"<<middleElement<<endl;
             if(target == middleElement)
                 return true;
             if(target > middleElement)
@@ -66,7 +60,6 @@ public:
                 startRow = startRow;
             }
         }
-        cout<<"BINSearch on:"<<startRow<<endl;
         return binarySearch(matrix[startRow], target);
     }
 };

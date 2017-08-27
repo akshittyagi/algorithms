@@ -79,7 +79,7 @@ int main()
     matrix.push_back({10,11,13,17});
     matrix.push_back({20,22,24,29});
     matrix.push_back({30,33,37,39});
-    // matrix.push_back({40,42,49,52});
+    matrix.push_back({40,42,49,52});
     cout<<sol.searchMatrix(matrix, 4);
     return 0;
 }

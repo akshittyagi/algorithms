@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stack>
 #include <string>
+
 using namespace std;
 
 bool isNum(string input)
@@ -15,6 +16,7 @@ bool isNum(string input)
     }
     return true;
 }
+
 class StackMachine
 {
   private:
@@ -27,8 +29,7 @@ class StackMachine
     int getResult();
 };
 
-bool
-StackMachine::isEmpty()
+bool StackMachine::isEmpty()
 {
     return mStack.empty();
 }

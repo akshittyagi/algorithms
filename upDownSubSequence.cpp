@@ -17,33 +17,37 @@ There are several subsequences that achieve this length. One is [1,17,10,13,10,1
 Input: [1,2,3,4,5,6,7,8,9]
 Output: 2
 */
-class Solution {
-public:
-    int wiggleMaxLength(vector<int>& nums) {
-        
-        if(nums.size()<=0)
+class Solution
+{
+  public:
+    int wiggleMaxLength(vector<int> &nums)
+    {
+
+        if (nums.size() <= 0)
             return 0;
-        else if(nums.size()<=1)
+        else if (nums.size() <= 1)
             return nums.size();
-        
+
         int ret = 1;
         int j = 0;
-        for(int i=1;i<nums.size();i++)
+        for (int i = 1; i < nums.size(); i++)
         {
-            if(nums[j]<nums[i]){
+            if (nums[j] < nums[i])
+            {
                 ret++;
-                while(i<nums.size()-1 and nums[i]<=nums[i+1])
+                while (i < nums.size() - 1 and nums[i] <= nums[i + 1])
                     i++;
             }
-            else if(nums[j]>nums[i]){
+            else if (nums[j] > nums[i])
+            {
                 ret++;
-                while(i<nums.size()-1 and nums[i]>=nums[i+1])
+                while (i < nums.size() - 1 and nums[i] >= nums[i + 1])
                     i++;
             }
-            
+
             j = i;
         }
-        
+
         return ret;
     }
 };

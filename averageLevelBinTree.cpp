@@ -10,6 +10,7 @@ Given a non-empty binary tree, return the average value of the nodes on each lev
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
+#include <vector>
 class Solution
 {
   public:

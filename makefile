@@ -1,0 +1,2 @@
+choot:
+	g++ randomShuffle.cpp
